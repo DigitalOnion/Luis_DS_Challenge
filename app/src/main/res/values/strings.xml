@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DubSmashChallenge</string>
+    <string name="app_label">DubSmash Challenge</string>
+
+    <string name="term_input_hint">Enter search term</string>
+    <string name="found_no_records">The search found no records</string>
+    <string name="network_error">A netowork error occured,\nplease try again later</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="result"
+            type="com.outerspace.dubsmashchallenge.api.Result" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/userName"
+            android:text="@{result.data.creator.username}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/general_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/playback"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/soundName"
+            android:text="@{result.data.name}"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/playback"
+            app:layout_constraintTop_toBottomOf="@id/userName"/>
+
+        <ImageView
+            android:id="@+id/playback"
+            android:src="@drawable/ic_play_arrow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="@id/userName"
+            app:layout_constraintBottom_toBottomOf="@id/soundName"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/general_margin"
+            app:layout_constraintTop_toBottomOf="@id/soundName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
